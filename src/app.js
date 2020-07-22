@@ -1,12 +1,12 @@
 const express = require('express')
 const hbs = require('hbs')
-const path = require('path')
+const path = require('path')//not npm
 const app = express()
 //custom js
 const geocode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
 
-const port = process.env.PORT || 2000
+const port = process.env.PORT || 3000
 
 const publicdir = path.join(__dirname,'../public')
 
@@ -21,7 +21,7 @@ app.get('', (req, res) => {
 app.get('/weather', (req, res) => {
     const add = req.query.address
     if(!add){
-        return res.send({error: 'Provide an address first!'})
+        return res.send({error: 'Please provide an address!'})
     }
     geocode(add, (error, {lattitude, longitude, location} = {}) => {
         if(error)
