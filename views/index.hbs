@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surreal Weather</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="main-body">
+    <div class="main">
+        <header>
+            <h1>Weather Forecast</h1>
+            <div id="search-field">
+                <form>
+            <input type="text" placeholder="Enter a location eg. Dhaka">
+            <button class="btn">Search</button>
+                </form>
+            </div>
+        </header>
+        <div id="bod">
+        <div id="main-data">
+            <img id="img" src="images/cloud.svg" alt="">
+
+            <div class="loader"></div><br/>
+            <p id="temp"></p>
+            <p id="forecast">Find forecast of anywhere on earth.</p>
+            <p id="loc"></p>
+            <p id="date"></p>
+
+            
+
+        </div>
+        <div style='clear:both'></div>
+        <div id="details">
+         <div id="left">   
+        <p class="label">Feels like</p>
+        <p class="val" id="feels">0</p>
+        <p class="label">Humidity</p>
+        <p class="val" id="humidity">0</p>
+        <p class="label">Pressure</p>
+        <p class="val" id="pressure">0</p>
+        <p class="label">UVI</p>
+        <p class="val" id="uv">0</p>
+         </div>
+         <div id="right">
+        <p class="label">Dew point</p>
+        <p class="val" id="dewpoint">0</p>
+        <p class="label">Wind speed</p>
+        <p class="val" id="windspeed">0</p>
+        <p class="label">Visibility</p>
+        <p class="val" id="visibility">0</p>
+        <p class="label">Clouds</p>
+        <p class="val" id="clouds">0</p>
+         </div>
+        </div>
+        </div>
+    </div>
+    <footer>
+        <div>
+            <a href="#"><img src="images/about.svg" alt=""></a>
+            <a href="#"><img src="images/facebook.svg" alt=""></a>
+            <a href="mailto:surrealtech999@gmail.com"><img src="images/email.svg" alt=""></a>
+        </div><br>
+        <span>&copy; Surreal Tech</span>
+    </footer>
+    </div>
+    <script src="js/app2.js"></script>
+</body>
+</html>

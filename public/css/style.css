@@ -1,0 +1,366 @@
+body{
+    background-color: rgb(145, 202, 255);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.loader {
+    border: 12px solid #92ceff; /* Light grey */
+    border-top: 12px solid #3498db;
+    border-right: 12px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    animation: spin 1.5s linear infinite;
+    display: none;
+
+    margin: 0;
+    padding: 0;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+#main-body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: rgb(146, 206, 255);
+    width: 60%;
+    margin: 0 auto;
+    margin-top: -8px;
+    border-left: 2px solid rgb(0, 110, 255);
+    border-right: 2px solid rgb(0, 110, 255)
+}
+#main-data{
+    margin-left: 50px;
+    height: 10px;
+}
+
+#temp{
+font-size: 70px;
+color: white;
+margin: 5px 5px 0px 5px;
+}
+#forecast{
+    font-size: 40px;
+    color: white;
+    margin: 0;
+}
+#loc{
+    font-size: 25px;
+    color: white;
+    margin-top: 10px;
+}
+
+#date{
+    font-size: 30px;
+    color: white;
+    margin: 20px 5px 0 5px;
+}
+
+img{
+    float: right;
+    width: 200px;
+    height: 200px;
+    margin: 0 15px 0 5px;
+}
+.main{
+    flex-grow: 1;
+}
+header{
+    margin-top: -10px !important;
+    text-align: center;
+    color: white;
+    /* background-color: rgb(88, 159, 252); */
+    background-image: linear-gradient( rgb(0, 100, 231) ,rgb(146, 206, 255));
+    margin: 0 auto;
+    padding: 1px;
+    border-bottom: 1px solid rgb(89, 166, 255);
+    font-family: 'Cormorant SC', serif;
+}
+h1{
+    font-size: 60px;
+}
+
+input{
+    width: 300px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    margin-right: 10px;
+    background-color: rgb(233, 233, 233);
+    /* box-shadow: 2px 2px 7px inset rgb(100, 100, 100), -3px -3px 3px inset white; */
+    box-shadow: -3px -3px 8px inset rgb(255, 255, 255), 2px 2px 10px inset rgb(73, 73, 73);
+    font-size: 23px;
+    padding-left: 15px;
+}
+::placeholder{
+    font-style: italic;
+    text-align: center;
+}
+.btn{
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: larger;
+    /* box-shadow: -2px -2px 5px 2px inset rgb(78, 78, 78); */
+    box-shadow: -2px -2px 5px  rgb(119, 186, 250), 2px 2px 5px  rgb(0, 46, 99);
+}
+
+.btn:hover{
+    background-color: rgb(189, 255, 255);
+}
+.btn:active{
+    box-shadow: -4px -4px 5px inset rgb(219, 255, 250), 2px 2px 10px inset rgb(128, 128, 128);
+
+}
+
+#search-field{
+    margin: 5% 0 0 0;
+    padding: 0 0 1% 0;
+}
+footer{
+    text-align: center;
+    color: rgb(9, 0, 51);
+    font-size: 30px;
+    border-top: 1px solid rgb(14, 110, 255);
+    background-color: rgb(65, 170, 255);
+    background-image: linear-gradient(rgb(146, 206, 255), rgb(80, 156, 255));
+
+    padding: 40px;
+    height: 80px;
+    margin-top: 40px;
+    /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+    /* font-family: 'Orbitron', sans-serif; */
+    /* font-family: 'Racing Sans One', cursive; */
+    font-family: 'Cormorant SC', serif;
+}
+footer div{
+    margin-left: -50px;
+}
+footer div a{
+    text-decoration: none;
+    color: white;
+    margin: 0 50px;
+}
+footer div a:hover{
+    color: rgb(104, 255, 162)
+}
+footer div a img{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+}
+footer span{
+    margin: 0 auto;
+    padding: 0;
+}
+#right{
+        float: right;
+        margin-right: 30px;
+}
+#left{
+    float: left;
+    margin-left: 30px;
+}
+#details{
+    border-top: 1px solid rgb(89, 166, 255);
+    margin-top: 100px;
+}
+.label{
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: rgb(10, 0, 65);
+    font-weight: bold;
+}
+.val{
+    color: white;
+    font-size: 25px;
+}
+
+@media(max-width: 600px){
+    body{
+        background-color: rgb(145, 202, 255);
+    }
+
+    .loader {
+        border: 12px solid #92ceff; /* Light grey */
+        border-top: 12px solid #3498db;
+        border-right: 12px solid #3498db; /* Blue */
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        animation: spin 1.5s linear infinite;
+        display: none;
+      }
+      
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+
+    #main-body{
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        background-color: rgb(146, 206, 255);
+        width: 100%;
+        margin: 0 auto;
+        margin-top: -8px;
+        border-left: 2px solid rgb(0, 110, 255);
+        border-right: 2px solid rgb(0, 110, 255)
+    }
+    #main-data{
+        margin-left: 15px;
+    }
+    #temp{
+    font-size: 60px;
+    color: white;
+    margin: 5px 5px 0px 5px;
+    }
+    #forecast{
+        font-size: 25px;
+        color: white;
+        margin: 0;
+    }
+    #loc{
+        font-size: 18px;
+        color: white;
+        margin-top: 10px;
+    }
+
+    img{
+        float: right;
+        width: 150px;
+        height: 150px;
+        margin: 0 15px 0 5px;
+    }
+    .main{
+        flex-grow: 1;
+    }
+    header{
+        margin-top: -10px !important;
+        text-align: center;
+        color: white;
+        /* background-color: rgb(88, 159, 252); */
+        background-image: linear-gradient( rgb(0, 100, 231) ,rgb(146, 206, 255));
+        margin: 0 auto;
+        padding: 1px;
+        border-bottom: 1px solid rgb(89, 166, 255);
+        font-family: 'Cormorant SC', serif;
+    }
+    h1{
+        font-size: 45px;
+    }
+    
+    input{
+        width: 200px;
+        height: 40px;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+        margin-right: 10px;
+        background-color: rgb(233, 233, 233);
+        /* box-shadow: 2px 2px 7px inset rgb(100, 100, 100), -3px -3px 3px inset white; */
+        box-shadow: -2px -2px 10px inset rgb(255, 255, 255), 4px 4px 10px inset rgb(73, 73, 73);
+        font-size: 14px;
+        padding-left: 15px;
+    }
+    ::placeholder{
+        font-style: italic;
+        text-align: center;
+    }
+    .btn{
+        width: 70px;
+        height: 40px;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        font-size: larger;
+        /* box-shadow: -2px -2px 5px 2px inset rgb(78, 78, 78); */
+        box-shadow: -2px -2px 3px  rgb(84, 175, 255), 2px 2px 3px  rgb(0, 46, 99);
+    }
+    
+    .btn:hover{
+        background-color: rgb(189, 255, 255);
+    }
+    .btn:active{
+        box-shadow: -2px -2px 3px inset rgb(219, 255, 250), 2px 2px 3px inset rgb(128, 128, 128);
+    
+    }
+    
+    #search-field{
+        margin: 5% 0 0 0;
+        padding: 0 0 1% 0;
+    }
+    footer{
+        text-align: center;
+        color: rgb(9, 0, 51);
+        font-size: 30px;
+        border-top: 1px solid rgb(14, 110, 255);
+        background-color: rgb(65, 170, 255);
+        background-image: linear-gradient(rgb(146, 206, 255), rgb(80, 156, 255));
+    
+        padding: 40px;
+        height: 80px;
+        margin-top: 40px;
+        /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+        /* font-family: 'Orbitron', sans-serif; */
+        /* font-family: 'Racing Sans One', cursive; */
+        font-family: 'Cormorant SC', serif;
+    }
+    footer div{
+        margin-left: -50px;
+    }
+    footer div a{
+        text-decoration: none;
+        color: white;
+        margin: 0 50px;
+    }
+    footer div a:hover{
+        color: rgb(104, 255, 162)
+    }
+    footer div a img{
+        width: 30px;
+        height: 30px;
+        position: absolute;
+    }
+    footer span{
+        margin: 0 auto;
+        padding: 0;
+        font-size: 25px;
+    }
+    #right{
+            float: right;
+    }
+    #left{
+        float: left;
+    }
+    #details{
+        border-top: 1px solid rgb(89, 166, 255);
+        margin-top: 100px;
+    }
+    .label{
+        font-size: 20px;
+        margin-bottom: 5px;
+        color: rgb(10, 0, 65);
+        font-weight: bold;
+    }
+    .val{
+        color: white;
+        font-size: 25px;
+        margin: 5px 0 60px 0;
+    }
+    
+
+
+
+}
