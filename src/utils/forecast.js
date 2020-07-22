@@ -6,10 +6,10 @@ const forecast = (lattitude, longitude, callBack)=>{
 
 
         if(error){
-            callBack('Unable to connect to location services!', undefined)
+            callBack('Please provide a valid location!', undefined)
         }
         else if(body.message){
-            callBack('Unable to find location! Try another search!', undefined)
+            callBack('Please provide a valid location!', undefined)
         }
         else{
             const {current} = body

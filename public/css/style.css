@@ -236,6 +236,12 @@ footer span{
         margin-top: 10px;
     }
 
+    #date{
+        font-size: 23px;
+        color: white;
+        margin: 20px 5px 0 5px;
+    }
+
     img{
         float: right;
         width: 150px;
