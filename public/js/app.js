@@ -43,7 +43,8 @@ const getDate = ()=>{
 
     if(hrs < 12)
     {
-        if(hrs < 10){hrs = '0' + hrs}
+        if(hrs < 10 && hrs != 0){hrs = '0' + hrs}
+        else if(hrs == 0){hrs = 12}
         time =  hrs + ":" + min + ' am'
     }
     else if(hrs > 12)
