@@ -21,7 +21,7 @@ app.get('', (req, res) => {
 app.get('/weather', (req, res) => {
     const add = req.query.address
     if(!add){
-        return res.send({error: 'Please provide an address!'})
+        return res.send({error: 'Please provide a location!'})
     }
     geocode(add, (error, {lattitude, longitude, location} = {}) => {
         if(error)
