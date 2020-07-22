@@ -102,11 +102,11 @@ form.addEventListener('submit', (e) => {
                 loc.innerHTML = data.location
                 feels.innerHTML = Math.round(data.feels) + '&degC'
                 humidity.innerHTML = data.humidity + '%'
-                pressure.innerHTML = data.pressure + ' Pa'
-                uv.innerHTML = data.uv
+                pressure.innerHTML = data.pressure + ' hPa'
+                uv.innerHTML = data.uv + ' mWm<sup>-2</sup>'
                 dewpoint.innerHTML = Math.round(data.dewpoint) + '&degC'
-                windspeed.innerHTML = data.windspeed +' mph'
-                visibility.innerHTML = data.visibility
+                windspeed.innerHTML = (data.windspeed * 1.6).toFixed(2) +' kmh<sup>-1</sup>'
+                visibility.innerHTML = data.visibility / 1000 + ' km'
                 clouds.innerHTML = data.clouds + '%'
 
                 label.visibility = true
