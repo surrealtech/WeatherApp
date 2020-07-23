@@ -23,7 +23,9 @@ const forecast = (lattitude, longitude, callBack)=>{
                 dewpoint: current.dew_point,
                 windspeed: current.wind_speed,
                 visibility: current.visibility,
-                clouds: current.clouds
+                clouds: current.clouds,
+                lat: lattitude,
+                lon: longitude
             })
         }
 

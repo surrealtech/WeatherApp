@@ -29,7 +29,7 @@ app.get('/weather', (req, res) => {
            res.send({error})
         }
         else{
-    forecast(lattitude, longitude, (error, {temp, forecast, feels, humidity, pressure, uv, dewpoint, windspeed, visibility, clouds}) => {
+    forecast(lattitude, longitude, (error, {temp, forecast, feels, humidity, pressure, uv, dewpoint, windspeed, visibility, clouds, lat, lon}) => {
           if(error){
          res.send({error})
         }
@@ -45,7 +45,9 @@ app.get('/weather', (req, res) => {
                    dewpoint,
                    windspeed,
                    visibility,
-                   clouds
+                   clouds,
+                   lat,
+                   lon
                 })  
           }
       })

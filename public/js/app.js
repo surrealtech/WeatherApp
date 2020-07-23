@@ -20,43 +20,32 @@ const windspeed = document.querySelector("#windspeed")
 const visibility = document.querySelector("#visibility")
 const clouds = document.querySelector("#clouds")
 
-let date
-let time
+let dateToday, hrs, min, time
 
-const getDate = ()=>{
-    let today = new Date()
+const getDate = (localtime)=>{
+    dateToday = localtime.substring(0, 10)
+    hrs = Number(localtime.substring(11, 13))
+    min = localtime.substring(14, 16)
 
-    let dateToday, month
-    dateToday = today.getDate()
-    month = (today.getMonth()+1)
-
-    if(dateToday < 10){dateToday = '0' + dateToday}
-    if(month < 10){month = '0' + month}
-
-    date = dateToday +'-'+ month +'-'+today.getFullYear()
-
-    let hrs, min
-    hrs = today.getHours()
-    min = today.getMinutes() 
-
-    if(min < 10){min = '0' + min}
+    console.log(dateToday)
+    console.log(min)
 
     if(hrs < 12)
     {
-        if(hrs < 10 && hrs != 0){hrs = '0' + hrs}
-        else if(hrs == 0){hrs = 12}
-        time =  hrs + ":" + min + ' am'
+        if(hrs == 0){hrs = 12}
+        time = hrs + ':' + min + ' am'
     }
     else if(hrs > 12)
     {
         hrs = hrs - 12
-        if(hrs < 10){hrs = '0' + hrs}
         time =  hrs + ":" + min + ' pm'
     }
     else
     {
         time =  hrs + ":" + min + ' pm'
     }
+
+    console.log(hrs)
 }
 
 form.addEventListener('submit', (e) => {
@@ -94,10 +83,20 @@ form.addEventListener('submit', (e) => {
             }
             else{
 
-                getDate()
+                fetch('https://dev.virtualearth.net/REST/v1/TimeZone/'+ data.lat +','+ data.lon +'?key=Arho4N2s-g5kTYSKvy3GnhAojkM6bCP1ZF4BFD2gdBGNTG4CJDzmKm1lpKgMmi0w').then((response2) => {
+                    response2.json().then((data2) => {
+                        
+                        localtime = data2.resourceSets[0].resources[0].timeZone.convertedTime.localTime
+
+                        getDate(localtime)
+                        dateDiv.innerHTML = time + ', ' + dateToday
+                        console.log(localtime)
+
+                    })
+                
+                })
 
                 loader.style.display = 'none'
-                dateDiv.innerHTML = time + ', ' + date
                 temp.innerHTML = Math.round(data.temp) + '&degC'
                 forecast.innerHTML = data.forecast 
                 loc.innerHTML = data.location
