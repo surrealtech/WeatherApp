@@ -186,7 +186,7 @@ footer span{
     font-size: 30px;
 }
 
-@media(max-width: 600px){
+@media(max-width: 800px){
     body{
         background-color: rgb(145, 202, 255);
     }
